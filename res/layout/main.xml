@@ -5,8 +5,9 @@
     android:orientation="vertical" >
 
     <ListView
-            android:id="@+id/MovieListView"
+            android:id="@+id/movieListView"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" />
+
 
 </LinearLayout>

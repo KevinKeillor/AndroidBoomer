@@ -1,11 +1,11 @@
 package wcf1.groggypirate.com;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,7 +21,7 @@ public class MovieListView  extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setListAdapter(new ArrayAdapter<MovieInfo>(this, R.layout.movielistitem, MovieInfo.createMovieInfo()));
+        //setListAdapter(new ArrayAdapter<MovieInfo>(this, R.layout.movie_header_row, (List<MovieInfo>) MovieInfo.createMovieInfo(0,"IRON MAN","1900")));
 
         ListView lv = getListView();
         lv.setTextFilterEnabled(true);

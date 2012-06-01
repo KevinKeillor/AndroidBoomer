@@ -1,5 +1,7 @@
 package wcf1.groggypirate.com;
 
+import android.graphics.drawable.Drawable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: user
@@ -8,12 +10,18 @@ package wcf1.groggypirate.com;
  * To change this template use File | Settings | File Templates.
  */
 public class MovieInfo {
-
-    private MovieInfo() {
+    public Drawable icon;
+    public String title;
+    public String year;
+    private MovieInfo(Drawable icon, String title, String year) {
+        super();
+        this.icon = icon;
+        this.title = title;
+        this.year = year;
     }
 
-    public static MovieInfo createMovieInfo() {
-        return new MovieInfo();
+    public static MovieInfo create(Drawable icon, String title, String Year) {
+        return new MovieInfo(icon, title, Year);
         //baalz
     }
 }
