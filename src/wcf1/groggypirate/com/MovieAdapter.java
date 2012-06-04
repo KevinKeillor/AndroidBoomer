@@ -42,7 +42,7 @@ public class MovieAdapter extends ArrayAdapter<MovieInfo>
 
             holder = new MovieHolder();
             holder.imgIcon = (ImageView)row.findViewById(R.id.movieImg);
-            holder.txtTitle = (TextView)row.findViewById(R.id.txtTitle);
+            holder.txtTitle = (TextView)row.findViewById(R.id.movieTitle);
 
             row.setTag(holder);
         }

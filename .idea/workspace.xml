@@ -12,15 +12,10 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c1517f5-2c66-4cc5-97af-9ecca5c45e95" name="Default" comment="First">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/user.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/movie_item_row.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieAdapter.java" />
-      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\res\layout\movielistitem.xml" afterPath="$PROJECT_DIR$/res/layout/movie_header_row.xml" />
+    <list default="true" id="5c1517f5-2c66-4cc5-97af-9ecca5c45e95" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieInfo.java" afterPath="$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieListView.java" afterPath="$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieListView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/movie_item_row.xml" afterPath="$PROJECT_DIR$/res/layout/movie_item_row.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieAdapter.java" afterPath="$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/wcf1/groggypirate/com/Wcf1Activity.java" afterPath="$PROJECT_DIR$/src/wcf1/groggypirate/com/Wcf1Activity.java" />
     </list>
     <ignored path="android1.iws" />
@@ -39,6 +34,21 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/Wcf1Activity.java" line="21" class="wcf1.groggypirate.com.Wcf1Activity" package="wcf1.groggypirate.com">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -88,11 +98,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movie_header_row.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/movie_header_row.xml">
+      <file leaf-file-name="BuildConfig.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/classes/wcf1/groggypirate/com/BuildConfig.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="34" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#278#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="R.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/classes/wcf1/groggypirate/com/R.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#864#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestClient.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/classes/wcf1/groggypirate/com/RestClient.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#1776#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Wcf1Activity.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/classes/wcf1/groggypirate/com/Wcf1Activity.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#401#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,25 +145,7 @@
       <file leaf-file-name="movie_item_row.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/movie_item_row.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="35" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieListView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieListView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="10" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieInfo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="227" selection-end="252" vertical-scroll-proportion="0.0">
+            <state line="16" column="68" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,10 +154,8 @@
       <file leaf-file-name="MovieAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="60" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="53" column="71" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,7 +163,7 @@
       <file leaf-file-name="Wcf1Activity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/Wcf1Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="63" selection-start="752" selection-end="752" vertical-scroll-proportion="0.34274954">
+            <state line="31" column="98" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.8086957">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,10 +171,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/RestClient.java">
+      <file leaf-file-name="MovieInfo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="51" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0">
+            <state line="27" column="62" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -183,9 +217,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="501" />
-    <option name="width" value="1342" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -281,6 +316,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Boomer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope">
@@ -327,6 +376,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="69" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="ANDRIOD1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -339,10 +389,11 @@
     <property name="options.lastSelected" value="settings.github" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="38308F5857D500EC" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Android Application.Wcf1">
+  <component name="RunManager" selected="Android Application.Boomer">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -502,13 +553,13 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="false" name="Wcf1" type="AndroidRunConfigurationType" factoryName="Android Application">
+    <configuration default="false" name="Boomer" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="Boomer" />
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="ANDRIOD1" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
       <option name="COMMAND_LINE" value="" />
       <option name="WIPE_USER_DATA" value="false" />
       <option name="DISABLE_BOOT_ANIMATION" value="false" />
@@ -522,7 +573,7 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Android Application.Wcf1" />
+      <item index="0" class="java.lang.String" itemvalue="Android Application.Boomer" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -574,30 +625,34 @@
       <created>1338505535273</created>
       <updated>1338505535273</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Custom list">
+      <created>1338593370384</created>
+      <updated>1338593370384</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="501" y="0" width="1342" height="1040" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3409091" sideWeight="0.47376665" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3409091" sideWeight="0.47376665" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25920126" sideWeight="0.6715909" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2586852" sideWeight="0.671875" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24090908" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3409091" sideWeight="0.5207518" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.5152325" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284091" sideWeight="0.4893855" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.47220048" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32700893" sideWeight="0.46819884" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18794048" sideWeight="0.65909094" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284091" sideWeight="0.49412686" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12773918" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.4810262" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -642,7 +697,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="First" />
+    <option name="LAST_COMMIT_MESSAGE" value="Custom list" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -656,6 +711,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="First" />
+    <MESSAGE value="Custom list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -668,6 +724,16 @@
     <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="10" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/RestClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="51" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/movie_header_row.xml">
@@ -684,46 +750,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieAdapter.java">
+    <entry file="file://$PROJECT_DIR$/bin/classes/wcf1/groggypirate/com/BuildConfig.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="60" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#278#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/movie_item_row.xml">
+    <entry file="file://$PROJECT_DIR$/bin/classes/wcf1/groggypirate/com/R.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="35" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#864#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieListView.java">
+    <entry file="file://$PROJECT_DIR$/bin/classes/wcf1/groggypirate/com/RestClient.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="10" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#1776#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/RestClient.java">
+    <entry file="file://$PROJECT_DIR$/bin/classes/wcf1/groggypirate/com/Wcf1Activity.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="51" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#401#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="227" selection-end="252" vertical-scroll-proportion="0.0">
+        <state line="27" column="62" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/MovieAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="71" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/movie_item_row.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="68" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/wcf1/groggypirate/com/Wcf1Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="63" selection-start="752" selection-end="752" vertical-scroll-proportion="0.34274954">
+        <state line="31" column="98" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.8086957">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

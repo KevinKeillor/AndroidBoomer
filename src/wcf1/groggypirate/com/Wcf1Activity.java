@@ -19,7 +19,7 @@ public class Wcf1Activity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        Drawable img =  LoadImageFromWebOperations("http://cdn4.iconfinder.com/data/icons/picol/icons/video_down_32.png");
+        Drawable img =  LoadImageFromWebOperations("http://82.41.204.91:8732/AhabService/movie/thumb/1");
         MovieInfo movie_data[] = new MovieInfo[]
                 {
                         MovieInfo.create(img, "Cloudy","1900"),
