@@ -11,17 +11,26 @@ import android.graphics.drawable.Drawable;
  */
 public class MovieInfo {
     public Drawable icon;
+    public String id;
     public String title;
     public String year;
-    private MovieInfo(Drawable icon, String title, String year) {
+    public String genre;
+    public String tag;
+    public String runtime;
+
+    private MovieInfo(Drawable Icon, String Id, String Title, String Year, String Genre, String Tag, String Runtime) {
         super();
-        this.icon = icon;
-        this.title = title;
-        this.year = year;
+        this.icon = Icon;
+        this.id = Id;
+        this.title = Title;
+        this.year = Year;
+        this.genre = Genre;
+        this.tag = Tag;
+        this.runtime = Runtime;
+
     }
 
-    public static MovieInfo create(Drawable icon, String title, String Year) {
-        return new MovieInfo(icon, title, Year);
-        //baalz
+    public static MovieInfo create(Drawable Icon, String Id, String Title, String Year, String Genre, String Tag, String Runtime) {
+        return new MovieInfo(Icon, Id, Title, Year, Genre, Tag, Runtime);
     }
 }

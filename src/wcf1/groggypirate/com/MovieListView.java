@@ -21,8 +21,6 @@ public class MovieListView  extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //setListAdapter(new ArrayAdapter<MovieInfo>(this, R.layout.movie_header_row, (List<MovieInfo>) MovieInfo.createMovieInfo(0,"IRON MAN","1900")));
-
         ListView lv = getListView();
         lv.setTextFilterEnabled(true);
 

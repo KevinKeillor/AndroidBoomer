@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Comparator;
+
 /**
  * Created with IntelliJ IDEA.
  * User: user
@@ -41,8 +43,11 @@ public class MovieAdapter extends ArrayAdapter<MovieInfo>
             row = inflater.inflate(layoutResourceId, parent, false);
 
             holder = new MovieHolder();
-            holder.imgIcon = (ImageView)row.findViewById(R.id.movieImg);
-            holder.txtTitle = (TextView)row.findViewById(R.id.movieTitle);
+            holder.movieImg = (ImageView)row.findViewById(R.id.movieImg);
+            holder.movieTitle = (TextView)row.findViewById(R.id.movieTitle);
+            holder.movieYear = (TextView)row.findViewById(R.id.movieYear);
+            holder.movieRuntime = (TextView)row.findViewById(R.id.movieDuration);
+            holder.movieTag = (TextView)row.findViewById(R.id.movieTag);
 
             row.setTag(holder);
         }
@@ -52,15 +57,30 @@ public class MovieAdapter extends ArrayAdapter<MovieInfo>
         }
 
         MovieInfo movie = data[position];
-        holder.txtTitle.setText(movie.title);
-        holder.imgIcon.setImageDrawable(movie.icon);
+        holder.movieImg.setImageDrawable(movie.icon);
+        holder.movieTitle.setText(movie.title);
+        holder.movieYear.setText(movie.year);
+        holder.movieRuntime.setText(movie.runtime);
+        holder.movieTag.setText(movie.tag);
 
         return row;
     }
+    public void refreshArray(){
+        this.sort(new Comparator<MovieInfo>() {
+            public int compare(MovieInfo object1, MovieInfo object2) {
+                return object1.title.compareTo(object2.title);
+            };
+        });
+        this.notifyDataSetChanged();
+    }
+
 
     static class MovieHolder
     {
-        ImageView imgIcon;
-        TextView txtTitle;
+        ImageView movieImg;
+        TextView movieTitle;
+        TextView movieYear;
+        TextView movieRuntime;
+        TextView movieTag;
     }
 }
