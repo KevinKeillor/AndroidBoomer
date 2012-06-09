@@ -47,7 +47,8 @@ public class MovieAdapter extends ArrayAdapter<MovieInfo>
             holder.movieTitle = (TextView)row.findViewById(R.id.movieTitle);
             holder.movieYear = (TextView)row.findViewById(R.id.movieYear);
             holder.movieRuntime = (TextView)row.findViewById(R.id.movieDuration);
-            holder.movieTag = (TextView)row.findViewById(R.id.movieTag);
+            holder.movieGenre = (TextView)row.findViewById(R.id.movieGenre);
+            holder.movieCast = (TextView)row.findViewById(R.id.movieCast);
 
             row.setTag(holder);
         }
@@ -61,8 +62,8 @@ public class MovieAdapter extends ArrayAdapter<MovieInfo>
         holder.movieTitle.setText(movie.title);
         holder.movieYear.setText(movie.year);
         holder.movieRuntime.setText(movie.runtime);
-        holder.movieTag.setText(movie.tag);
-
+        holder.movieGenre.setText(movie.genre);
+        holder.movieCast.setText(movie.cast);
         return row;
     }
     public void refreshArray(){
@@ -81,6 +82,7 @@ public class MovieAdapter extends ArrayAdapter<MovieInfo>
         TextView movieTitle;
         TextView movieYear;
         TextView movieRuntime;
-        TextView movieTag;
+        TextView movieGenre;
+        TextView movieCast;
     }
 }

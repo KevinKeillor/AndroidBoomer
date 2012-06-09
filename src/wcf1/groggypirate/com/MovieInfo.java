@@ -17,8 +17,9 @@ public class MovieInfo {
     public String genre;
     public String tag;
     public String runtime;
+    public String cast;
 
-    private MovieInfo(Drawable Icon, String Id, String Title, String Year, String Genre, String Tag, String Runtime) {
+    private MovieInfo(Drawable Icon, String Id, String Title, String Year, String Genre, String Tag, String Runtime, String Cast) {
         super();
         this.icon = Icon;
         this.id = Id;
@@ -27,10 +28,11 @@ public class MovieInfo {
         this.genre = Genre;
         this.tag = Tag;
         this.runtime = Runtime;
+        this.cast = Cast;
 
     }
 
-    public static MovieInfo create(Drawable Icon, String Id, String Title, String Year, String Genre, String Tag, String Runtime) {
-        return new MovieInfo(Icon, Id, Title, Year, Genre, Tag, Runtime);
+    public static MovieInfo create(Drawable Icon, String Id, String Title, String Year, String Genre, String Tag, String Runtime , String Cast) {
+        return new MovieInfo(Icon, Id, Title, Year, Genre, Tag, Runtime, Cast);
     }
 }

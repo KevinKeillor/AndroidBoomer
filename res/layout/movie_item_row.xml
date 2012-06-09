@@ -5,16 +5,16 @@
                   android:layout_height="match_parent"
                   android:background="#303033"
                   android:orientation="horizontal"
-                  android:padding="5dp" >
+                  android:padding="2dp" >
 
 
         <ImageView
                 android:id="@+id/movieImg"
                 android:layout_width="72dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
                 android:background="#00000000"
                 android:gravity="center_vertical" />
 
@@ -43,7 +43,8 @@
                         android:text="Title"
                         android:textColor="#FFFFFF"
                         android:textSize="18dp"
-                        android:textStyle="bold" android:layout_width="match_parent"/>
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"/>
 
                 <LinearLayout
                         android:layout_width="wrap_content"
@@ -60,7 +61,7 @@
                             android:text="1980"
                             android:textColor="#FFFFFF"
                             android:textSize="12dp"
-                            android:textStyle="bold" android:layout_gravity="right"/>
+                            android:layout_gravity="right"/>
 
                     <TextView
                             android:id="@+id/movieDuration"
@@ -72,23 +73,30 @@
                             android:text="1h 35m"
                             android:textColor="#FFFFFF"
                             android:textSize="12dp"
-                            android:textStyle="bold" android:layout_gravity="right"/>
+                            android:layout_gravity="right"/>
                 </LinearLayout>
             </LinearLayout>
 
-
-
+            <TextView
+                    android:id="@+id/movieGenre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="left"
+                    android:text="Genre"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11dp" />
 
             <TextView
-                    android:id="@+id/movieTag"
+                    android:id="@+id/movieCast"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
                     android:gravity="left"
-                    android:text="Tag"
+                    android:text="Cast"
                     android:textColor="#FFFFFF"
-                    android:textSize="11dp"
-                    android:textStyle="bold" />
+                    android:textSize="11dp" />
     </LinearLayout>
 </LinearLayout>
