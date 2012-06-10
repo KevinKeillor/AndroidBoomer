@@ -1,7 +1,11 @@
 package wcf1.groggypirate.com;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.graphics.drawable.Drawable;
 import android.view.View;
@@ -15,9 +19,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.URL;
 import java.lang.Math;
 import java.util.HashMap;
@@ -34,16 +36,49 @@ public class Wcf1Activity extends Activity {
         setContentView(R.layout.main);
 
         try {
+            String movieArtistFile = "movie_Artists";
 
-            String artistInfoJson =  GetArtistInfo();
-            JSONArray jsonArtistArray = new JSONArray(artistInfoJson);
+            try {
+                FileInputStream fis = openFileInput(movieArtistFile);
+                ObjectInputStream is = new ObjectInputStream(fis);
+                Artists = (Map<Integer,String>) is.readObject();
+                is.close();
 
-            for (int x = 0; x < jsonArtistArray.length(); x++) {
-                JSONObject jsonArtistObject = jsonArtistArray.getJSONObject(x);
-                Artists.put(jsonArtistObject.getInt("I"),jsonArtistObject.get("N").toString());
+            } catch (FileNotFoundException e) {
+
+                String artistInfoJson =  GetArtistInfo();
+                JSONArray jsonArtistArray = new JSONArray(artistInfoJson);
+
+                for (int x = 0; x < jsonArtistArray.length(); x++) {
+                    JSONObject jsonArtistObject = jsonArtistArray.getJSONObject(x);
+                    Artists.put(jsonArtistObject.getInt("I"),jsonArtistObject.get("N").toString());
+                }
+
+                FileOutputStream fos = openFileOutput(movieArtistFile, Context.MODE_PRIVATE);
+                ObjectOutputStream os = new ObjectOutputStream(fos);
+                os.writeObject(Artists);
+                os.close();
             }
 
-            String movieInfoJson =  GetMovieInfo();
+
+            String movieInfoJson;
+            String movieInfoFile = "movie_Info";
+            try {
+                FileInputStream fis = openFileInput(movieInfoFile);
+                ObjectInputStream is = new ObjectInputStream(fis);
+                movieInfoJson = (String) is.readObject();
+                is.close();
+
+            } catch (FileNotFoundException e) {
+
+                movieInfoJson =  GetMovieInfo();
+
+                FileOutputStream fos = openFileOutput(movieInfoFile, Context.MODE_PRIVATE);
+                ObjectOutputStream os = new ObjectOutputStream(fos);
+                os.writeObject(movieInfoJson);
+                os.close();
+            }
+
             JSONArray jsonArray = new JSONArray(movieInfoJson);
             MovieInfo movie_data[] = new MovieInfo[jsonArray.length()];
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -62,7 +97,25 @@ public class Wcf1Activity extends Activity {
                     castString += " as " + castObject.get("N").toString();
                 }
 
-                Drawable img = LoadImageFromWebOperations("http://82.41.204.91:8732/AhabService/movie/thumb/" + jsonObject.get("I"));
+
+
+                String movieId = jsonObject.get("I").toString();
+                String thumbFile = "movie_Thm" + movieId;
+                Drawable img;
+                try {
+                    FileInputStream imgIn = openFileInput(thumbFile);
+                    img = Drawable.createFromResourceStream(getResources(), null, imgIn, thumbFile);
+                    imgIn.close();
+
+                }catch (FileNotFoundException e){
+                    img = LoadImageFromWebOperations("http://82.41.204.91:8732/AhabService/movie/thumb/" + movieId);
+                    Bitmap image_saved= ((BitmapDrawable)img).getBitmap();
+                    FileOutputStream imgOut = openFileOutput(thumbFile, Context.MODE_PRIVATE);
+                    image_saved.compress(Bitmap.CompressFormat.PNG,100,imgOut);
+                    imgOut.flush();
+                    imgOut.close();
+                }
+
                 MovieInfo info = MovieInfo.create(img, jsonObject.get("I").toString(),
                                         jsonObject.get("N").toString(),
                                         jsonObject.get("Y").toString(),
