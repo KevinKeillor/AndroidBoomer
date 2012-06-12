@@ -1,4 +1,4 @@
-package wcf1.groggypirate.com;
+package boomer.groggypirate.com;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,13 +11,6 @@ import android.widget.TextView;
 
 import java.util.Comparator;
 
-/**
- * Created with IntelliJ IDEA.
- * User: user
- * Date: 01/06/12
- * Time: 22:15
- * To change this template use File | Settings | File Templates.
- */
 public class MovieAdapter extends ArrayAdapter<MovieInfo>
 {
 
@@ -35,7 +28,7 @@ public class MovieAdapter extends ArrayAdapter<MovieInfo>
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
-        MovieHolder holder = null;
+        MovieHolder holder;
 
         if(row == null)
         {
@@ -70,7 +63,7 @@ public class MovieAdapter extends ArrayAdapter<MovieInfo>
         this.sort(new Comparator<MovieInfo>() {
             public int compare(MovieInfo object1, MovieInfo object2) {
                 return object1.title.compareTo(object2.title);
-            };
+            }
         });
         this.notifyDataSetChanged();
     }

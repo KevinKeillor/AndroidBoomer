@@ -1,14 +1,15 @@
-package wcf1.groggypirate.com;
+package boomer.groggypirate.com;
 
-import android.app.Activity;
+import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -25,15 +26,14 @@ import java.lang.Math;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Wcf1Activity extends Activity {
+public class MovieListActivity extends ListActivity {
 
-    private ListView movieListView;
+    private MovieInfo m_Movie_Data[];
 
     Map<Integer,String> Artists = new HashMap<Integer,String>();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
 
         try {
             String movieArtistFile = "movie_Artists";
@@ -80,7 +80,7 @@ public class Wcf1Activity extends Activity {
             }
 
             JSONArray jsonArray = new JSONArray(movieInfoJson);
-            MovieInfo movie_data[] = new MovieInfo[jsonArray.length()];
+            m_Movie_Data = new MovieInfo[jsonArray.length()];
             for (int i = 0; i < jsonArray.length(); i++) {
 
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
@@ -122,24 +122,47 @@ public class Wcf1Activity extends Activity {
                                         jsonObject.get("G").toString(),
                                         jsonObject.get("T").toString(),
                                         jsonObject.get("R").toString(),
-                                        castString);
-
-                movie_data[i] = info;
+                                        castString,
+                                        jsonObject.get("P").toString(),
+                                        jsonObject.get("D").toString(),
+                                        jsonObject.get("W").toString());
+                m_Movie_Data[i] = info;
             }
 
             MovieAdapter adapter = new MovieAdapter(this,
-                    R.layout.movie_item_row, movie_data);
+                    R.layout.movie_item_row, m_Movie_Data);
 
             adapter.refreshArray();
 
-            movieListView = (ListView)findViewById(R.id.movieListView);
+            setListAdapter(adapter);
 
-            View header = (View)getLayoutInflater().inflate(R.layout.movie_header_row, null);
-            movieListView.addHeaderView(header);
+            ListView lv = getListView();
+            lv.setTextFilterEnabled(true);
 
-            movieListView.setAdapter(adapter);
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View view,
+                                        int position, long id) {
+                    // When clicked, show a toast with the TextView text
+                    Intent movieDetail = new Intent(view.getContext(), MovieDetailActivity.class);
+                    MovieInfo currentMovie = m_Movie_Data[position];
+                    movieDetail.putExtra("current_movie_id", currentMovie.id);
+                    movieDetail.putExtra("current_movie_title", currentMovie.title);
+                    movieDetail.putExtra("current_movie_year", currentMovie.year);
+                    movieDetail.putExtra("current_movie_runtime", currentMovie.runtime);
+                    movieDetail.putExtra("current_movie_rating", currentMovie.rating);
+                    movieDetail.putExtra("current_movie_cast", currentMovie.cast);
+                    movieDetail.putExtra("current_movie_director", currentMovie.director);
+                    movieDetail.putExtra("current_movie_genre", currentMovie.genre);
+                    movieDetail.putExtra("current_movie_hd", currentMovie.hd);
+                    movieDetail.putExtra("current_movie_plot", currentMovie.plot);
+                    movieDetail.putExtra("current_movie_tag", currentMovie.tag);
+                    movieDetail.putExtra("current_movie_writer", currentMovie.writer);
+                    view.getContext().startActivity(movieDetail);
+                }
+            });
+
         } catch (Exception e){
-            String what = e.getLocalizedMessage();
+            e.printStackTrace();
         }
     }
 
@@ -148,8 +171,7 @@ public class Wcf1Activity extends Activity {
         try
         {
             InputStream is = (InputStream) new URL(url).getContent();
-            Drawable d = Drawable.createFromStream(is, "src name");
-            return d;
+            return Drawable.createFromStream(is, "src name");
         }
         catch (Exception e)
         {
@@ -213,20 +235,21 @@ public class Wcf1Activity extends Activity {
 
 
     }
+
+
 }
 
 /*
-public void Go() {
-RestClient client = new RestClient("http://192.168.1.14:8732/Service1/data/1");
 
-try {
-client.Execute(RestClient.RequestMethod.GET);
-} catch (Exception e) {
-e.printStackTrace();
-}
-String response = client.getResponse();
-Log.d(response, response);
-}
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+       // super.onListItemClick(l, v, position, id);
+        Intent movieDetail = new Intent(v.getContext(),MovieDetailActivity.class);
+        v.getContext().startActivity(movieDetail);
+
+    }
+
+
 */
 
 
