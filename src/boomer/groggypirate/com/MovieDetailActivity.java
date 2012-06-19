@@ -11,8 +11,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class MovieDetailActivity extends Activity {
-
-
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
