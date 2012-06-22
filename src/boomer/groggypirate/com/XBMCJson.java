@@ -28,7 +28,7 @@ public class XBMCJson {
         URL url;
 
         JSONArray response = new JSONArray();
-        url = new URL("http://192.168.1.13:8080/jsonrpc");
+        url = new URL("http://192.168.1.14:8080/jsonrpc");
 
         URLConnection uc = url.openConnection();
         uc.setDoOutput(true);
