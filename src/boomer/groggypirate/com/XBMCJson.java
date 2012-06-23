@@ -23,12 +23,27 @@ public class XBMCJson {
     private static final int CONNECTION_TIMEOUT = 5000;
     private static final int CONNECTION_READ_TIMEOUT = 5000;
 
-    public JSONArray writeCommand(String method, JSONObject jsonCommand) throws IOException, JSONException {
+    public void writeCommand(final String method, final JSONObject jsonCommand) throws IOException, JSONException {
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    _writeCommand(method, jsonCommand);
+                } catch (IOException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                } catch (JSONException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            }
+        }).start();
+    }
 
+    public JSONArray _writeCommand(String method, JSONObject jsonCommand) throws IOException, JSONException {
         URL url;
 
         JSONArray response = new JSONArray();
-        url = new URL("http://192.168.1.14:8080/jsonrpc");
+        XBMCSettings xbmcSettings = XBMCSettings.getInstance();
+        String path = "http://"+xbmcSettings.getIpAddress()+":"+xbmcSettings.getPort()+"/jsonrpc";
+        url = new URL(path);
 
         URLConnection uc = url.openConnection();
         uc.setDoOutput(true);

@@ -31,7 +31,7 @@ public class MoviePlayerActivity extends Activity implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_player);
-
+                      /*
         ImageView view = (ImageView) findViewById(R.id.movieImg);
         String thumbFile = "movie_Thm" + getIntent().getSerializableExtra("current_movie_id");
         try {
@@ -46,7 +46,7 @@ public class MoviePlayerActivity extends Activity implements
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+                        */
         setText("current_movie_title", R.id.movieTitle);
 
         // Start the background task to handle player notifications.
@@ -136,7 +136,8 @@ public class MoviePlayerActivity extends Activity implements
 
         if (task.isPending()) {
             // task has not been started yet, start it
-            task.execute("192.168.1.14");
+            XBMCSettings xbmcSettings = XBMCSettings.getInstance();
+            task.execute(xbmcSettings.getIpAddress());
         }
     }
 

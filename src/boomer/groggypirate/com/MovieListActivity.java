@@ -3,6 +3,7 @@ package boomer.groggypirate.com;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -66,6 +67,16 @@ public class MovieListActivity extends ListActivity {
         } catch (Exception e){
             e.printStackTrace();
         }
+
+        XBMCSettings xbmcSettings = XBMCSettings.getInstance();
+        SharedPreferences settings = getSharedPreferences(xbmcSettings.getName(), 0);
+
+        String xbmcIp = settings.getString("XBMCip", "192.168.1.13");
+        xbmcSettings.setIpAddress(xbmcIp);
+
+        String xbmcPort = settings.getString("XBMCport", "8080");
+        xbmcSettings.setPort(xbmcPort);
+
     }
 
     private void BuildView(String movieInfoJson) throws JSONException, IOException {
@@ -307,16 +318,16 @@ public class MovieListActivity extends ListActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        /*
+
         switch (item.getItemId()) {
-            case R.id:     Toast.makeText(this, "You pressed the icon!", Toast.LENGTH_LONG).show();
+            case R.id.xbmcsettings:
+                Intent xbmcSettings = new Intent(this, XBMCSettingsActivity.class);
+                this.startActivity(xbmcSettings);
+
                 break;
-            case R.id.text:     Toast.makeText(this, "You pressed the text!", Toast.LENGTH_LONG).show();
-                break;
-            case R.id.icontext: Toast.makeText(this, "You pressed the icon and text!", Toast.LENGTH_LONG).show();
-                break;
+
         }
-        */
+
         return true;
     }
 }

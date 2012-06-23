@@ -4,4 +4,35 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent">
 
+    <ListView
+            android:id="@+id/movieListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        <TextView
+                android:id="@+id/xbmcIP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.64"
+                android:gravity="left"
+                android:text="IP:"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/xbmcPort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.64"
+                android:gravity="left"
+                android:text="Port:"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+    </ListView>
+
 </LinearLayout>
