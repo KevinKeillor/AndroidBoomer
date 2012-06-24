@@ -2,18 +2,25 @@ package boomer.groggypirate.com;
 
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 /**
  * MoviePlayerActivity
@@ -25,12 +32,72 @@ public class MoviePlayerActivity extends Activity implements
 
 
     private XBMCNotificationReceiver task;
+    // Timer for the seekbar
+    private Timer m_SeekTimer;
+
+    long m_StartTime;
+    static boolean m_Playing = true;
+
+    private RefreshHandler m_RefreshHandler = new RefreshHandler();
+
+    class RefreshHandler extends Handler {
+        public void setOffset() {
+            this.m_Offset += System.currentTimeMillis() - m_StartTime ;
+        }
+
+        long m_Offset;
+        RefreshHandler() {
+            m_Offset = 0;
+        }
+        @Override
+        public void handleMessage(Message msg) {
+            long millis = m_Offset + System.currentTimeMillis() - m_StartTime;
+            int seconds = (int) (millis / 1000);
+            int minutes = seconds / 60;
+            int hours = minutes / 60;
+            minutes = minutes % 60;
+            seconds     = seconds % 60;
+            TextView view = (TextView) findViewById(R.id.movieTime);
+            view.setText(String.format("%d:%02d:%02d",hours, minutes, seconds));
+            SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
+            seekbar.setProgress((int) (millis / 1000));
+        }
+    };
+
+    class UpdateTimeTask extends TimerTask {
+        UpdateTimeTask(){
+            m_StartTime = System.currentTimeMillis();
+        }
+        public void run() {
+            m_RefreshHandler.sendEmptyMessage(0);
+        }
+    }
 
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movie_player);
+
+        m_StartTime = System.currentTimeMillis();
+        SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
+        String currentMovieRuntime = (String) getIntent().getSerializableExtra("current_movie_runtime");
+        DateFormat sdf;
+        if (currentMovieRuntime.contains("h")){
+            sdf = new SimpleDateFormat("hh'h' mm'min'");
+        } else {
+            sdf = new SimpleDateFormat("mm'min'");
+        }
+
+        Date runtime = new Date(0);
+        try {
+            sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
+            runtime = sdf.parse(currentMovieRuntime);
+        } catch (ParseException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        int mins = (int) (runtime.getTime()/1000);
+        seekbar.setMax(mins);
                       /*
         ImageView view = (ImageView) findViewById(R.id.movieImg);
         String thumbFile = "movie_Thm" + getIntent().getSerializableExtra("current_movie_id");
@@ -50,9 +117,14 @@ public class MoviePlayerActivity extends Activity implements
         setText("current_movie_title", R.id.movieTitle);
 
         // Start the background task to handle player notifications.
-        new XBMCNotificationReceiver().execute("192.168.1.14");
 
-// try to obtain a reference to a task piped through from the previous
+        XBMCSettings xbmcSettings = XBMCSettings.getInstance();
+        new XBMCNotificationReceiver().execute(xbmcSettings.getIpAddress());
+
+
+
+
+        // try to obtain a reference to a task piped through from the previous
         // activity instance
         task = (XBMCNotificationReceiver) getLastNonConfigurationInstance();
 
@@ -62,16 +134,27 @@ public class MoviePlayerActivity extends Activity implements
         }
 
         startPendingTask(null);
+        m_SeekTimer = new Timer();
+        m_SeekTimer.schedule(new UpdateTimeTask(), 0, 1000);
 
-}
+    }
 
     //Play button
     public void PlayPauseClick(View view) throws IOException, JSONException {
+
         XBMCJson json = new XBMCJson();
         JSONObject Params = new JSONObject();
         Params.put("playerid",1);
         String Command = "Player.PlayPause";
         json.writeCommand(Command, Params);
+        if(m_Playing){
+            m_SeekTimer.cancel();
+            m_RefreshHandler.setOffset();
+        } else {
+            m_SeekTimer = new Timer();
+            m_SeekTimer.schedule(new UpdateTimeTask(), 0, 1000);
+        }
+        m_Playing = !m_Playing;
     }
 
     //Stop button
@@ -101,7 +184,7 @@ public class MoviePlayerActivity extends Activity implements
         json.writeCommand(Command, Params);
     }
 
-    void setText( String Extra, int Id){
+    public void setText( String Extra, int Id){
         String currentMovieText= (String) getIntent().getSerializableExtra(Extra);
         //
         TextView view = (TextView) findViewById(Id);
@@ -166,3 +249,4 @@ public class MoviePlayerActivity extends Activity implements
         return false;  //To change body of implemented methods use File | Settings | File Templates.
     }
 }
+

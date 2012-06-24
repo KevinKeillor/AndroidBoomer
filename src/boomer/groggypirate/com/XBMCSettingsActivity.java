@@ -1,7 +1,12 @@
 package boomer.groggypirate.com;
 
-import android.app.ListActivity;
+
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceFragment;
+import android.widget.Button;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,11 +15,15 @@ import android.os.Bundle;
  * Time: 00:48
  * To change this template use File | Settings | File Templates.
  */
-public class XBMCSettingsActivity extends ListActivity {
+import android.os.Bundle;
+import android.preference.PreferenceActivity;
 
+public class XBMCSettingsActivity extends PreferenceActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.xbmc_setting);
+
+        addPreferencesFromResource(R.xml.preferences);
+        addPreferencesFromResource(R.xml.preferences2);
     }
 }

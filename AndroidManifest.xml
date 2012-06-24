@@ -4,16 +4,18 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="10" />
+    <uses-sdk android:minSdkVersion="10"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 	
     <application
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:hardwareAccelerated="true">
 
         <activity
             android:theme="@android:style/Theme.NoTitleBar"
             android:name=".MovieListActivity"
+
             android:label="@string/app_name" android:configChanges="keyboard|keyboardHidden|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,10 +36,14 @@
         </activity>
 
         <activity
-                android:theme="@android:style/Theme.NoTitleBar"
                 android:name=".XBMCSettingsActivity"
                 android:label="@string/app_name" android:configChanges="keyboard|keyboardHidden|orientation">
         </activity>
+
+        <activity
+                android:name=".XBMCSettingsActivityHC"
+                android:label="@string/app_name" android:configChanges="keyboard|keyboardHidden|orientation">
+        </activity>
     </application>
-	
+
 </manifest>

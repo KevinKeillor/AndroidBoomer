@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.graphics.drawable.Drawable;
 import android.view.Menu;
@@ -321,11 +322,15 @@ public class MovieListActivity extends ListActivity {
 
         switch (item.getItemId()) {
             case R.id.xbmcsettings:
-                Intent xbmcSettings = new Intent(this, XBMCSettingsActivity.class);
-                this.startActivity(xbmcSettings);
 
-                break;
+                if (Build.VERSION.SDK_INT< Build.VERSION_CODES.HONEYCOMB) {
+                    startActivity(new Intent(this, XBMCSettingsActivity.class));
+                }
+                else {
+                    startActivity(new Intent(this, XBMCSettingsActivityHC.class));
+                }
 
+                return(true);
         }
 
         return true;
