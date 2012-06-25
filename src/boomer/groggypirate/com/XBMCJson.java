@@ -1,5 +1,6 @@
 package boomer.groggypirate.com;
 
+import android.content.Context;
 import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,11 +24,11 @@ public class XBMCJson {
     private static final int CONNECTION_TIMEOUT = 5000;
     private static final int CONNECTION_READ_TIMEOUT = 5000;
 
-    public void writeCommand(final String method, final JSONObject jsonCommand) throws IOException, JSONException {
+    public void writeCommand(final String method, final JSONObject jsonCommand, final Context context) throws IOException, JSONException {
         new Thread(new Runnable() {
             public void run() {
                 try {
-                    _writeCommand(method, jsonCommand);
+                    _writeCommand(method, jsonCommand, context);
                 } catch (IOException e) {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                 } catch (JSONException e) {
@@ -37,11 +38,11 @@ public class XBMCJson {
         }).start();
     }
 
-    public JSONArray _writeCommand(String method, JSONObject jsonCommand) throws IOException, JSONException {
+    public JSONArray _writeCommand(String method, JSONObject jsonCommand,Context context) throws IOException, JSONException {
         URL url;
 
         JSONArray response = new JSONArray();
-        XBMCSettings xbmcSettings = XBMCSettings.getInstance();
+        XBMCSettings xbmcSettings = XBMCSettings.getInstance(context);
         String path = "http://"+xbmcSettings.getIpAddress()+":"+xbmcSettings.getPort()+"/jsonrpc";
         url = new URL(path);
 
@@ -51,7 +52,7 @@ public class XBMCJson {
         uc.setReadTimeout(CONNECTION_READ_TIMEOUT);
         uc.setRequestProperty("Connection", "close");
 
-        String authEncoded = EncodeAuth("kev:pass");
+        String authEncoded = EncodeAuth(xbmcSettings.getName()+":"+xbmcSettings.getPassword());
 
         if (authEncoded != null) {
             uc.setRequestProperty("Authorization", "Basic " + authEncoded);

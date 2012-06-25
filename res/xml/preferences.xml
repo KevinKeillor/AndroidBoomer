@@ -1,10 +1,29 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Simple Preferences">
-        <CheckBoxPreference
-                android:key="checkbox"
-                android:title="Checkbox Preference"
-                android:summary="Check it on, check it off"
+    <PreferenceCategory android:title="XBMC Settings">
+        <EditTextPreference
+                android:key="XBMCHost"
+                android:title="Host address or IP"
+                android:inputType="text"
+            />
+
+        <EditTextPreference
+                android:key="XBMCPort"
+                android:title="Port"
+                android:inputType="number"
+                android:numeric="integer"
+                android:maxLength="4"
+                />
+
+        <EditTextPreference
+                android:key="XBMCUserName"
+                android:title="Username"
+                android:inputType="text"
+                />
+        <EditTextPreference
+                android:key="XBMCPassword"
+                android:title="Password"
+                android:inputType="textWebPassword"
                 />
 
     </PreferenceCategory>

@@ -118,11 +118,8 @@ public class MoviePlayerActivity extends Activity implements
 
         // Start the background task to handle player notifications.
 
-        XBMCSettings xbmcSettings = XBMCSettings.getInstance();
+        XBMCSettings xbmcSettings = XBMCSettings.getInstance(this);
         new XBMCNotificationReceiver().execute(xbmcSettings.getIpAddress());
-
-
-
 
         // try to obtain a reference to a task piped through from the previous
         // activity instance
@@ -146,7 +143,7 @@ public class MoviePlayerActivity extends Activity implements
         JSONObject Params = new JSONObject();
         Params.put("playerid",1);
         String Command = "Player.PlayPause";
-        json.writeCommand(Command, Params);
+        json.writeCommand(Command, Params, this);
         if(m_Playing){
             m_SeekTimer.cancel();
             m_RefreshHandler.setOffset();
@@ -163,7 +160,7 @@ public class MoviePlayerActivity extends Activity implements
         JSONObject Params = new JSONObject();
         Params.put("playerid",1);
         String Command = "Player.Stop";
-        json.writeCommand(Command, Params);
+        json.writeCommand(Command, Params, this);
     }
 
     //Play button
@@ -172,7 +169,7 @@ public class MoviePlayerActivity extends Activity implements
         JSONObject Params = new JSONObject();
         Params.put("playerid",1);
         String Command = "Player.PlayPause";
-        json.writeCommand(Command, Params);
+        json.writeCommand(Command, Params, this);
     }
 
     //Play button
@@ -181,7 +178,7 @@ public class MoviePlayerActivity extends Activity implements
         JSONObject Params = new JSONObject();
         Params.put("playerid",1);
         String Command = "Player.PlayPause";
-        json.writeCommand(Command, Params);
+        json.writeCommand(Command, Params, this);
     }
 
     public void setText( String Extra, int Id){
@@ -219,7 +216,7 @@ public class MoviePlayerActivity extends Activity implements
 
         if (task.isPending()) {
             // task has not been started yet, start it
-            XBMCSettings xbmcSettings = XBMCSettings.getInstance();
+            XBMCSettings xbmcSettings = XBMCSettings.getInstance(this);
             task.execute(xbmcSettings.getIpAddress());
         }
     }

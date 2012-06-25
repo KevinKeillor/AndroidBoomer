@@ -1,12 +1,12 @@
 <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
     <header android:fragment="boomer.groggypirate.com.StockPreferenceFragment"
-            android:title="Original"
-            android:summary="The original set from the other examples">
+            android:title="XBMC"
+            android:summary="Settings for XBMC">
         <extra android:name="resource" android:value="preferences" />
     </header>
     <header android:fragment="boomer.groggypirate.com.StockPreferenceFragment"
-            android:title="Other Stuff"
-            android:summary="Well, we needed to show two sets here...">
+            android:title="Calibre"
+            android:summary="Books.....">
         <extra android:name="resource" android:value="preferences2" />
     </header>
 </preference-headers>

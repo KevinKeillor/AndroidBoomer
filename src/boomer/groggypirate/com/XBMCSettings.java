@@ -1,5 +1,9 @@
 package boomer.groggypirate.com;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
 /**
  * Created with IntelliJ IDEA.
  * User: user
@@ -10,36 +14,26 @@ package boomer.groggypirate.com;
 public class XBMCSettings {
     private static XBMCSettings ourInstance = new XBMCSettings();
 
-    private String ipAddress;
+    SharedPreferences m_preferences;
 
     public String getPort() {
-        return port;
+        return m_preferences.getString("XBMCPort", "8080");
     }
-
-    public void setPort(String port) {
-        this.port = port;
-    }
-
-    private String port;
-    private String name = "BoomerSettings";
-
 
     public String getIpAddress() {
-        return ipAddress;
+        return m_preferences.getString("XBMCHost", "192.168.1.14");
     }
-
-    public void setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
-    }
-
 
     public String getName() {
-        return name;
+        return m_preferences.getString("XBMCUserName", "user");
     }
 
+    public String getPassword() {
+        return m_preferences.getString("XBMCPassword", "pass");
+    }
 
-
-    public static XBMCSettings getInstance() {
+    public static XBMCSettings getInstance(Context context) {
+        ourInstance.m_preferences = PreferenceManager.getDefaultSharedPreferences(context);
         return ourInstance;
     }
 

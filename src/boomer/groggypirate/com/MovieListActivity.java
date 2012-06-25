@@ -10,6 +10,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.graphics.drawable.Drawable;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -68,15 +69,6 @@ public class MovieListActivity extends ListActivity {
         } catch (Exception e){
             e.printStackTrace();
         }
-
-        XBMCSettings xbmcSettings = XBMCSettings.getInstance();
-        SharedPreferences settings = getSharedPreferences(xbmcSettings.getName(), 0);
-
-        String xbmcIp = settings.getString("XBMCip", "192.168.1.13");
-        xbmcSettings.setIpAddress(xbmcIp);
-
-        String xbmcPort = settings.getString("XBMCport", "8080");
-        xbmcSettings.setPort(xbmcPort);
 
     }
 
@@ -183,7 +175,9 @@ public class MovieListActivity extends ListActivity {
 
     private Drawable GetMovieThumb(String movieId, String thumbFile) throws IOException {
         Drawable img;
-        img = LoadImageFromWebOperations("http://82.41.204.91:8732/AhabService/movie/thumb/" + movieId);
+
+        XBMCSettings settings = XBMCSettings.getInstance(this);
+        img = LoadImageFromWebOperations("http://"+settings.getIpAddress()+":8732/AhabService/movie/thumb/" + movieId);
         Bitmap image_saved= ((BitmapDrawable)img).getBitmap();
         FileOutputStream imgOut = openFileOutput(thumbFile, Context.MODE_PRIVATE);
         image_saved.compress(Bitmap.CompressFormat.PNG,100,imgOut);
@@ -256,8 +250,10 @@ public class MovieListActivity extends ListActivity {
     public String GetArtistInfo() {
         StringBuilder builder = new StringBuilder();
         HttpClient client = new DefaultHttpClient();
+        XBMCSettings settings = XBMCSettings.getInstance(this);
         HttpGet httpGet = new HttpGet(
-                "http://82.41.204.91:8732/AhabService/movie/artist");
+
+                "http://"+settings.getIpAddress()+":8732/AhabService/movie/artist");
         try {
             HttpResponse response = client.execute(httpGet);
             StatusLine statusLine = response.getStatusLine();
@@ -281,8 +277,9 @@ public class MovieListActivity extends ListActivity {
     public String GetMovieInfo() {
         StringBuilder builder = new StringBuilder();
         HttpClient client = new DefaultHttpClient();
+        XBMCSettings settings = XBMCSettings.getInstance(this);
         HttpGet httpGet = new HttpGet(
-                "http://82.41.204.91:8732/AhabService/movie/info");
+                "http://"+settings.getIpAddress()+":8732/AhabService/movie/info");
         try {
             HttpResponse response = client.execute(httpGet);
             StatusLine statusLine = response.getStatusLine();

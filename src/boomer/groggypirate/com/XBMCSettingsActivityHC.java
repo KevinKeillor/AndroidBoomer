@@ -8,11 +8,25 @@ package boomer.groggypirate.com;
  * To change this template use File | Settings | File Templates.
  */
 import java.util.List;
+
+import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
 public class XBMCSettingsActivityHC extends PreferenceActivity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onStart () {
+        super.onStart();
+    }
+
     @Override
     public void onBuildHeaders(List<Header> target) {
+
         loadHeadersFromResource(R.xml.preference_headers, target);
     }
 }
