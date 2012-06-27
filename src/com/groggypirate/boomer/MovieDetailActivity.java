@@ -1,10 +1,11 @@
-package boomer.groggypirate.com;
+package com.groggypirate.boomer;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import boomer.groggypirate.com.R;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

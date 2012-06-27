@@ -1,4 +1,4 @@
-package boomer.groggypirate.com;
+package com.groggypirate.boomer;
 
 
 import android.app.Activity;
@@ -7,8 +7,11 @@ import android.os.Bundle;
 
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.*;
+import boomer.groggypirate.com.*;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -26,7 +29,7 @@ import java.util.TimerTask;
  * MoviePlayerActivity
  */
 public class MoviePlayerActivity extends Activity implements
-        IgnitedAsyncTaskContextHandler<Integer, String>{
+        IgnitedAsyncTaskContextHandler<Integer, String> {
 
     private static final String TAG = "Boomer_MoviePlayerActivity";
 
@@ -40,6 +43,9 @@ public class MoviePlayerActivity extends Activity implements
 
     private RefreshHandler m_RefreshHandler = new RefreshHandler();
 
+    /**
+     *
+     */
     class RefreshHandler extends Handler {
         public void setOffset() {
             this.m_Offset += System.currentTimeMillis() - m_StartTime ;
@@ -49,9 +55,16 @@ public class MoviePlayerActivity extends Activity implements
         RefreshHandler() {
             m_Offset = 0;
         }
+
+        /**
+         * Handle the update and refresh the progressbar
+         * @param msg  Message
+         */
         @Override
         public void handleMessage(Message msg) {
             long millis = m_Offset + System.currentTimeMillis() - m_StartTime;
+            // Was going to add time but its not going to be accurate
+            /*
             int seconds = (int) (millis / 1000);
             int minutes = seconds / 60;
             int hours = minutes / 60;
@@ -59,11 +72,15 @@ public class MoviePlayerActivity extends Activity implements
             seconds     = seconds % 60;
             TextView view = (TextView) findViewById(R.id.movieTime);
             view.setText(String.format("%d:%02d:%02d",hours, minutes, seconds));
+            */
             SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
             seekbar.setProgress((int) (millis / 1000));
         }
-    };
+    }
 
+    /**
+     *
+     */
     class UpdateTimeTask extends TimerTask {
         UpdateTimeTask(){
             m_StartTime = System.currentTimeMillis();
@@ -73,7 +90,11 @@ public class MoviePlayerActivity extends Activity implements
         }
     }
 
-    /** Called when the activity is first created. */
+
+    /**
+     *  Called when the activity is first created.
+     * @param savedInstanceState Bundle
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,18 +104,20 @@ public class MoviePlayerActivity extends Activity implements
         SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
         String currentMovieRuntime = (String) getIntent().getSerializableExtra("current_movie_runtime");
         DateFormat sdf;
+        String parseFormat;
         if (currentMovieRuntime.contains("h")){
-            sdf = new SimpleDateFormat("hh'h' mm'min'");
+            parseFormat = "hh'h' mm'min'";
         } else {
-            sdf = new SimpleDateFormat("mm'min'");
+            parseFormat = "mm'min'";
         }
+        sdf = new SimpleDateFormat(parseFormat);
 
         Date runtime = new Date(0);
         try {
             sdf.setTimeZone(TimeZone.getTimeZone("UTC"));
             runtime = sdf.parse(currentMovieRuntime);
         } catch (ParseException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            Log.e(TAG,"Parse Error: Trying to get the ",e);
         }
         int mins = (int) (runtime.getTime()/1000);
         seekbar.setMax(mins);
@@ -114,10 +137,10 @@ public class MoviePlayerActivity extends Activity implements
             e.printStackTrace();
         }
                         */
+        // Set the movie title
         setText("current_movie_title", R.id.movieTitle);
 
         // Start the background task to handle player notifications.
-
         XBMCSettings xbmcSettings = XBMCSettings.getInstance(this);
         new XBMCNotificationReceiver().execute(xbmcSettings.getIpAddress());
 
@@ -137,6 +160,13 @@ public class MoviePlayerActivity extends Activity implements
     }
 
     //Play button
+
+    /**
+     * The play button has been clicked
+     * @param view
+     * @throws IOException
+     * @throws JSONException
+     */
     public void PlayPauseClick(View view) throws IOException, JSONException {
 
         XBMCJson json = new XBMCJson();

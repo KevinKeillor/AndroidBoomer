@@ -1,4 +1,4 @@
-package boomer.groggypirate.com;
+package com.groggypirate.boomer;
 import java.io.Serializable;
 
 public class MovieRawInfo implements Serializable {

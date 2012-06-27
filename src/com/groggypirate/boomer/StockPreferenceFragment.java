@@ -1,4 +1,4 @@
-package boomer.groggypirate.com;
+package com.groggypirate.boomer;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;

@@ -1,11 +1,28 @@
-package boomer.groggypirate.com;
+package com.groggypirate.boomer;
 
 
 import android.graphics.drawable.Drawable;
 
+/**
+ * MovieInfo
+ */
 public class MovieInfo extends MovieRawInfo {
     public Drawable icon; // dvd cover
 
+    /**
+     *
+     * @param Icon
+     * @param Id
+     * @param Title
+     * @param Year
+     * @param Genre
+     * @param Tag
+     * @param Runtime
+     * @param Cast
+     * @param Plot
+     * @param Director
+     * @param Writer
+     */
     private MovieInfo(Drawable Icon, String Id, String Title, String Year, String Genre, String Tag, String Runtime, String Cast,
                       String Plot, String Director, String Writer ) {
         super();
@@ -23,6 +40,21 @@ public class MovieInfo extends MovieRawInfo {
 
     }
 
+    /**
+     *
+     * @param Icon
+     * @param Id
+     * @param Title
+     * @param Year
+     * @param Genre
+     * @param Tag
+     * @param Runtime
+     * @param Cast
+     * @param Plot
+     * @param Director
+     * @param Writer
+     * @return
+     */
     public static MovieInfo create(Drawable Icon, String Id, String Title, String Year, String Genre, String Tag, String Runtime , String Cast,
          String Plot, String Director, String Writer ) {
         return new MovieInfo(Icon, Id, Title, Year, Genre, Tag, Runtime, Cast, Plot, Director, Writer);

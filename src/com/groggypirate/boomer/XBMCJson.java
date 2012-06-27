@@ -1,4 +1,4 @@
-package boomer.groggypirate.com;
+package com.groggypirate.boomer;
 
 import android.content.Context;
 import android.util.Log;
@@ -16,7 +16,7 @@ import java.net.URLDecoder;
 
 
 /**
- * XBMCJson
+ *  XBMCJson
  */
 public class XBMCJson {
 
@@ -24,24 +24,39 @@ public class XBMCJson {
     private static final int CONNECTION_TIMEOUT = 5000;
     private static final int CONNECTION_READ_TIMEOUT = 5000;
 
-    public void writeCommand(final String method, final JSONObject jsonCommand, final Context context) throws IOException, JSONException {
+    /**
+     * writeCommand
+     * @param method the method to call
+     * @param params the parameters to add to the called method
+     * @param context
+     */
+    public void writeCommand(final String method, final JSONObject params, final Context context){
         new Thread(new Runnable() {
             public void run() {
                 try {
-                    _writeCommand(method, jsonCommand, context);
+                    _writeCommand(method, params, context);
                 } catch (IOException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    Log.e(TAG,"IO Error on XBMCJson:writeCommand",e);
                 } catch (JSONException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    Log.e(TAG, "JSONException on XBMCJson:writeCommand", e);
                 }
             }
         }).start();
     }
 
-    public JSONArray _writeCommand(String method, JSONObject jsonCommand,Context context) throws IOException, JSONException {
+    /**
+     * _writeCommand private method to call
+     * @param method the method to call
+     * @param params the parameters to add to the called method
+     * @param context the activity from which we can get the preferences
+     * @return
+     * @throws IOException
+     * @throws JSONException
+     */
+    private JSONObject _writeCommand(String method, JSONObject params,Context context) throws IOException, JSONException {
         URL url;
 
-        JSONArray response = new JSONArray();
+        JSONObject response = new JSONObject();
         XBMCSettings xbmcSettings = XBMCSettings.getInstance(context);
         String path = "http://"+xbmcSettings.getIpAddress()+":"+xbmcSettings.getPort()+"/jsonrpc";
         url = new URL(path);
@@ -60,8 +75,7 @@ public class XBMCJson {
 
         OutputStreamWriter out = new OutputStreamWriter(
                 uc.getOutputStream());
-        //out.write("{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"Player.PlayPause\",\"params\":{\"playerid\":1}}");
-        out.write(CreateCommand(method, jsonCommand).toString());
+        out.write(CreateCommand(method, params).toString());
         out.close();
 
         try {
@@ -75,6 +89,13 @@ public class XBMCJson {
         return response;
     }
 
+    /**
+     * Returns a complete XBMC command from the given method and parameters
+     * @param method the method to call
+     * @param params the parameters to add to the called method
+     * @return  the created command
+     * @throws JSONException
+     */
     private JSONObject CreateCommand(String method, JSONObject params) throws JSONException {
         JSONObject json = new JSONObject();
 
@@ -86,7 +107,14 @@ public class XBMCJson {
         return json;
     }
 
-    private JSONArray GetResponse(URLConnection uc) throws IOException, JSONException {
+    /**
+     *
+     * @param uc the URLConnection to receive a response from
+     * @return the response from the previous command
+     * @throws IOException
+     * @throws JSONException
+     */
+    private JSONObject GetResponse(URLConnection uc) throws IOException, JSONException {
         final BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()), 8192);
         final StringBuilder response = new StringBuilder();
         String line;
@@ -95,12 +123,19 @@ public class XBMCJson {
             response.append(line);
         }
 
-        JSONArray JsonResponse = new JSONArray(response.toString());
+        JSONObject JsonResponse = new JSONObject(response.toString());
 
         in.close();
         return JsonResponse;
     }
 
+    /**
+     * Returns a base64 encoded version of the supplied authorisation code
+     *
+     * @param  auth the authorisation code to be encoded
+     * @return      the base64 encoded authorisation code
+     * @see         String
+     */
     private String EncodeAuth(String auth) {
         String authEncoded;
         authEncoded = Base64.encodeBytes(auth.getBytes());

@@ -1,4 +1,4 @@
-package boomer.groggypirate.com;
+package com.groggypirate.boomer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,19 +11,34 @@ import java.util.List;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import boomer.groggypirate.com.R;
 
+/**
+ * XBMCSettingsActivityHC
+ */
 public class XBMCSettingsActivityHC extends PreferenceActivity {
 
+    /**
+     * onCreate
+     * @param savedInstanceState
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
+    /**
+     *
+     */
     @Override
     public void onStart () {
         super.onStart();
     }
 
+    /**
+     * onBuildHeaders
+     * @param target a list of headers
+     */
     @Override
     public void onBuildHeaders(List<Header> target) {
 

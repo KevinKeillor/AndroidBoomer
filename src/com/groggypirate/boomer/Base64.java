@@ -1,4 +1,4 @@
-package boomer.groggypirate.com;
+package com.groggypirate.boomer;
 
 /**
  * <p>Encodes and decodes to and from Base64 notation.</p>

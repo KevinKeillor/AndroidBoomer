@@ -13,21 +13,34 @@
     </option>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="json" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="boomer" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="INFO" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c1517f5-2c66-4cc5-97af-9ecca5c45e95" name="Default" comment="">
+    <list default="true" id="5c1517f5-2c66-4cc5-97af-9ecca5c45e95" name="Default" comment="Settings working">
+      <change type="DELETED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\RestClient.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\Base64.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/Base64.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\IgnitedAsyncTask.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/IgnitedAsyncTask.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\IgnitedAsyncTaskContextHandler.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/IgnitedAsyncTaskContextHandler.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\IgnitedAsyncTaskDefaultHandler.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/IgnitedAsyncTaskDefaultHandler.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\IgnitedAsyncTaskHandler.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/IgnitedAsyncTaskHandler.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\JsonRpc.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/JsonRpc.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\MovieAdapter.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/MovieAdapter.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\MovieDetailActivity.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/MovieDetailActivity.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\MovieInfo.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/MovieInfo.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\MovieListActivity.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\MoviePlayerActivity.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/MoviePlayerActivity.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\MovieRawInfo.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/MovieRawInfo.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\StockPreferenceFragment.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/StockPreferenceFragment.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\XBMCJson.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCJson.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\XBMCNotificationReceiver.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCNotificationReceiver.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\XBMCSettings.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettings.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\XBMCSettingsActivity.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettingsActivity.java" />
+      <change type="MOVED" beforePath="C:\Users\user\workspace\Boomer\src\boomer\groggypirate\com\XBMCSettingsActivityHC.java" afterPath="$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettingsActivityHC.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/xbmc_menu.xml" afterPath="$PROJECT_DIR$/res/menu/xbmc_menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Boomer.iml" afterPath="$PROJECT_DIR$/Boomer.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/preference_headers.xml" afterPath="$PROJECT_DIR$/res/xml/preference_headers.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/preferences.xml" afterPath="$PROJECT_DIR$/res/xml/preferences.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/preferences2.xml" afterPath="$PROJECT_DIR$/res/xml/preferences2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/boomer/groggypirate/com/MovieListActivity.java" afterPath="$PROJECT_DIR$/src/boomer/groggypirate/com/MovieListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/boomer/groggypirate/com/MoviePlayerActivity.java" afterPath="$PROJECT_DIR$/src/boomer/groggypirate/com/MoviePlayerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCJson.java" afterPath="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCJson.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettings.java" afterPath="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivityHC.java" afterPath="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivityHC.java" />
     </list>
     <ignored path="android1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +64,21 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MoviePlayerActivity.java" line="98" class="boomer.groggypirate.com.MoviePlayerActivity" package="boomer.groggypirate.com">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettingsActivity.java" line="10" class="XBMCSettingsActivity.java" package="">
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettingsActivity.java" line="14" class="XBMCSettingsActivity.java" package="">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -64,8 +90,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MoviePlayerActivity.java" line="99" class="boomer.groggypirate.com.MoviePlayerActivity" package="boomer.groggypirate.com">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/StockPreferenceFragment.java" line="16" class="com.groggypirate.boomer.StockPreferenceFragment" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -77,8 +103,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MoviePlayerActivity.java" line="91" class="boomer.groggypirate.com.MoviePlayerActivity" package="boomer.groggypirate.com">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/StockPreferenceFragment.java" line="10" class="com.groggypirate.boomer.StockPreferenceFragment" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -90,8 +116,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivity.java" line="10" class="XBMCSettingsActivity.java" package="">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettingsActivityHC.java" line="44" class="com.groggypirate.boomer.XBMCSettingsActivityHC" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -103,8 +129,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivity.java" line="14" class="XBMCSettingsActivity.java" package="">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" line="41" class="com.groggypirate.boomer.MovieListActivity" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -116,8 +142,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/StockPreferenceFragment.java" line="16" class="boomer.groggypirate.com.StockPreferenceFragment" package="boomer.groggypirate.com">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" line="78" class="com.groggypirate.boomer.MovieListActivity" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -129,8 +155,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/StockPreferenceFragment.java" line="10" class="boomer.groggypirate.com.StockPreferenceFragment" package="boomer.groggypirate.com">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" line="224" class="com.groggypirate.boomer.MovieListActivity" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -142,8 +168,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivityHC.java" line="29" class="boomer.groggypirate.com.XBMCSettingsActivityHC" package="boomer.groggypirate.com">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" line="176" class="com.groggypirate.boomer.MovieListActivity" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -155,8 +181,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MovieListActivity.java" line="326" class="boomer.groggypirate.com.MovieListActivity" package="boomer.groggypirate.com">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" line="83" class="com.groggypirate.boomer.MovieListActivity" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -168,8 +194,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MovieListActivity.java" line="323" class="boomer.groggypirate.com.MovieListActivity" package="boomer.groggypirate.com">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" line="51" class="com.groggypirate.boomer.MovieListActivity" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -181,8 +207,8 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MovieListActivity.java" line="322" class="boomer.groggypirate.com.MovieListActivity" package="boomer.groggypirate.com">
-        <option name="ENABLED" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" line="73" class="com.groggypirate.boomer.MovieListActivity" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
@@ -194,7 +220,46 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MovieListActivity.java" line="319" class="boomer.groggypirate.com.MovieListActivity" package="boomer.groggypirate.com">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" line="220" class="com.groggypirate.boomer.MovieListActivity" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" line="213" class="com.groggypirate.boomer.MovieListActivity" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java" line="248" class="com.groggypirate.boomer.MovieListActivity" package="com.groggypirate.boomer">
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCNotificationReceiver.java" line="66" class="com.groggypirate.boomer.XBMCNotificationReceiver" package="com.groggypirate.boomer">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -221,8 +286,8 @@
         <option name="CONDITION_ENABLED" value="false" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -236,94 +301,87 @@
         <option name="CONDITION_ENABLED" value="false" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
     <breakpoint_rules />
-    <ui_properties />
+    <ui_properties>
+      <property name="line_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_flattenPackages" value="true" />
+      <property name="method_breakpoints_flattenPackages" value="true" />
+      <property name="field_breakpoints_flattenPackages" value="true" />
+      <property name="exception_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_groupByClasses" value="true" />
+      <property name="method_breakpoints_viewId" value="TABLE" />
+      <property name="field_breakpoints_groupByMethods" value="false" />
+      <property name="line_breakpoints_flattenPackages" value="true" />
+      <property name="field_breakpoints_groupByClasses" value="true" />
+      <property name="method_breakpoints_groupByClasses" value="true" />
+      <property name="exception_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
+      <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="method_breakpoints_groupByMethods" value="false" />
+    </ui_properties>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="android1" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="preferences.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/xml/preferences.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="37" selection-start="198" selection-end="206" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="145" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XBMCSettingsActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="8" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="XBMCSettingsActivityHC.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivityHC.java">
+        <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettingsActivityHC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="82" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+            <state line="39" column="38" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MovieListActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MovieListActivity.java">
+        <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="275" column="0" selection-start="10377" selection-end="10377" vertical-scroll-proportion="0.0">
+            <state line="222" column="62" selection-start="8464" selection-end="8464" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IgnitedAsyncTask.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/IgnitedAsyncTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="22" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="XBMCJson.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCJson.java">
+        <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCJson.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="57" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0">
+            <state line="58" column="52" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#889#1294#0" expanded="true" />
+                <element signature="e#1283#1284#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieInfo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="6" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoviePlayerActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MoviePlayerActivity.java">
+      <file leaf-file-name="MoviePlayerActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MoviePlayerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="12" selection-start="5978" selection-end="5978" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xbmc_menu.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/menu/xbmc_menu.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="26" selection-start="173" selection-end="173" vertical-scroll-proportion="0.123636365">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XBMCSettings.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="68" selection-start="637" selection-end="637" vertical-scroll-proportion="-15.64">
+            <state line="221" column="32" selection-start="6849" selection-end="6849" vertical-scroll-proportion="0.2247619">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -331,10 +389,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="String.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-15/android.jar!/java/lang/String.class">
+      <file leaf-file-name="XBMCSettings.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="19" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+            <state line="21" column="60" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XBMCNotificationReceiver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCNotificationReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="83" selection-start="1983" selection-end="1983" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -354,12 +421,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/xml/xbmc_setting.xml" />
-        <option value="$PROJECT_DIR$/res/layout/xbmc_setting.xml" />
-        <option value="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/arrays.xml" />
-        <option value="$PROJECT_DIR$/.project" />
-        <option value="$PROJECT_DIR$/src/boomer/groggypirate/com/StockPreferenceFragment.java" />
         <option value="$PROJECT_DIR$/res/xml/preferences2.xml" />
         <option value="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivityHC.java" />
         <option value="$PROJECT_DIR$/res/xml/preference_headers.xml" />
@@ -367,9 +428,15 @@
         <option value="$PROJECT_DIR$/res/xml/preferences.xml" />
         <option value="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettings.java" />
         <option value="$PROJECT_DIR$/src/boomer/groggypirate/com/MovieListActivity.java" />
-        <option value="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCJson.java" />
-        <option value="$PROJECT_DIR$/src/boomer/groggypirate/com/MoviePlayerActivity.java" />
         <option value="$PROJECT_DIR$/res/menu/xbmc_menu.xml" />
+        <option value="$PROJECT_DIR$/src/boomer/groggypirate/com/MoviePlayerActivity.java" />
+        <option value="$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCJson.java" />
+        <option value="$PROJECT_DIR$/src/com/groggypirate/boomer/MovieInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettingsActivityHC.java" />
+        <option value="$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettings.java" />
+        <option value="$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCJson.java" />
+        <option value="$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCNotificationReceiver.java" />
+        <option value="$PROJECT_DIR$/src/com/groggypirate/boomer/MoviePlayerActivity.java" />
       </list>
     </option>
   </component>
@@ -424,20 +491,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Boomer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -466,43 +519,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Boomer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Boomer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
+              <option name="myItemId" value="boomer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -518,10 +539,24 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Boomer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="366" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="487" />
@@ -549,7 +584,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="38308F5857D500EC" />
@@ -557,6 +592,9 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.groggypirate.boomer" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\user\workspace\Boomer\res\xml" />
     </key>
@@ -833,7 +871,11 @@
       <created>1340567502745</created>
       <updated>1340567502745</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Settings working">
+      <created>1340590443070</created>
+      <updated>1340590443070</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -845,7 +887,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38839287" sideWeight="0.777659" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27901787" sideWeight="0.777659" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32589287" sideWeight="0.5777659" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.4893855" order="8" side_tool="false" content_ui="tabs" />
@@ -901,7 +943,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="depreciated settings support mess sample working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Settings working" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -922,6 +964,7 @@
     <MESSAGE value="Added movieplayeractivity" />
     <MESSAGE value="began settings, network task now run in background" />
     <MESSAGE value="depreciated settings support mess sample working" />
+    <MESSAGE value="Settings working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -931,115 +974,110 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/proguard-project.txt">
+    <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/StockPreferenceFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MovieAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/xml/preferences2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/xml/preference_headers.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="38" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/StockPreferenceFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="24" selection-start="120" selection-end="143" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivityHC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="82" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-15/android.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettingsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="8" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="145" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="24" selection-start="120" selection-end="143" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/preferences.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="37" selection-start="198" selection-end="206" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="4" column="37" selection-start="198" selection-end="206" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCSettings.java">
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="68" selection-start="637" selection-end="637" vertical-scroll-proportion="-15.64">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="32" column="145" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MovieListActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="275" column="0" selection-start="10377" selection-end="10377" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/XBMCJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="57" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/boomer/groggypirate/com/MoviePlayerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="12" selection-start="5978" selection-end="5978" vertical-scroll-proportion="0.0">
+        <state line="27" column="8" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/xbmc_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="173" selection-end="173" vertical-scroll-proportion="0.123636365">
+        <state line="4" column="26" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-15/android.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="19" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="6" selection-start="967" selection-end="967" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettingsActivityHC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="38" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/IgnitedAsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="22" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-15/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="60" selection-start="3135" selection-end="3135" vertical-scroll-proportion="16.807692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MovieListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="222" column="62" selection-start="8464" selection-end="8464" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="60" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="52" selection-start="1808" selection-end="1808" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#889#1294#0" expanded="true" />
+            <element signature="e#1283#1284#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-15/android.jar!/java/nio/Buffer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="33" selection-start="471" selection-end="471" vertical-scroll-proportion="0.33212996">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/XBMCNotificationReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="83" selection-start="1983" selection-end="1983" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/groggypirate/boomer/MoviePlayerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="32" selection-start="6849" selection-end="6849" vertical-scroll-proportion="0.2247619">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,12 +1133,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Wcf1</last-edited>
+          <last-edited>Boomer</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,10 +1,10 @@
 <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
-    <header android:fragment="boomer.groggypirate.com.StockPreferenceFragment"
+    <header android:fragment="com.groggypirate.boomer.StockPreferenceFragment"
             android:title="XBMC"
             android:summary="Settings for XBMC">
         <extra android:name="resource" android:value="preferences" />
     </header>
-    <header android:fragment="boomer.groggypirate.com.StockPreferenceFragment"
+    <header android:fragment="com.groggypirate.boomer.StockPreferenceFragment"
             android:title="Calibre"
             android:summary="Books.....">
         <extra android:name="resource" android:value="preferences2" />

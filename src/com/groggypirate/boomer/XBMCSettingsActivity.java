@@ -1,4 +1,4 @@
-package boomer.groggypirate.com;
+package com.groggypirate.boomer;
 
 
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import java.util.List;
  */
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import boomer.groggypirate.com.R;
 
 public class XBMCSettingsActivity extends PreferenceActivity {
     @Override

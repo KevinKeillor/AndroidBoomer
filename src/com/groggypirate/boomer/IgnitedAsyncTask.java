@@ -1,4 +1,4 @@
-package boomer.groggypirate.com;
+package com.groggypirate.boomer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,8 +7,6 @@ package boomer.groggypirate.com;
  * Time: 01:32
  * To change this template use File | Settings | File Templates.
  */
-
-import java.util.concurrent.Callable;
 
 import android.app.Activity;
 import android.content.Context;
