@@ -2,6 +2,7 @@ package com.groggypirate.boomer;
 
 
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 
@@ -37,6 +38,8 @@ public class MoviePlayerActivity extends Activity implements
     private XBMCNotificationReceiver task;
     // Timer for the seekbar
     private Timer m_SeekTimer;
+    private int m_SeekPosition;
+    private int m_SeekMax;
 
     long m_StartTime;
     static boolean m_Playing = true;
@@ -74,7 +77,9 @@ public class MoviePlayerActivity extends Activity implements
             view.setText(String.format("%d:%02d:%02d",hours, minutes, seconds));
             */
             SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
-            seekbar.setProgress((int) (millis / 1000));
+            int seekPosition = (int) (millis / 1000);
+            seekbar.setProgress(seekPosition);
+            m_SeekPosition = seekPosition;
         }
     }
 
@@ -121,6 +126,7 @@ public class MoviePlayerActivity extends Activity implements
         }
         int mins = (int) (runtime.getTime()/1000);
         seekbar.setMax(mins);
+        m_SeekMax = mins;
                       /*
         ImageView view = (ImageView) findViewById(R.id.movieImg);
         String thumbFile = "movie_Thm" + getIntent().getSerializableExtra("current_movie_id");
@@ -274,6 +280,19 @@ public class MoviePlayerActivity extends Activity implements
     @Override
     public boolean onTaskFailed(Exception error) {
         return false;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        setContentView(R.layout.movie_player);
+
+        // Set the movie title
+        setText("current_movie_title", R.id.movieTitle);
+
+        SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
+        seekbar.setMax(m_SeekMax);
+        seekbar.setProgress(m_SeekPosition);
     }
 }
 
