@@ -1,8 +1,10 @@
 package com.groggypirate.boomer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import boomer.groggypirate.com.R;
@@ -12,6 +14,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class MovieDetailActivity extends Activity {
+
+    MovieInfo m_Movie_Data;
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,8 @@ public class MovieDetailActivity extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        m_Movie_Data = new MovieInfo();
+        IntentGetExtra();
 
         setText("current_movie_title", R.id.movieTitle);
         setText("current_movie_year", R.id.movieYear);
@@ -52,6 +58,45 @@ public class MovieDetailActivity extends Activity {
         TextView view = (TextView) findViewById(Id);
         view.setText(currentMovieText);
 
+    }
+
+    public void PlayPauseClick(View view)  {
+        // Start a movie player activity
+
+        Intent moviePlayer = new Intent(view.getContext(), MoviePlayerActivity.class);
+        IntentFillExtra(moviePlayer);
+        view.getContext().startActivity(moviePlayer);
+    }
+
+    private void IntentGetExtra() {
+        m_Movie_Data.id = (String) getIntent().getSerializableExtra("current_movie_id");
+        m_Movie_Data.title = (String) getIntent().getSerializableExtra("current_movie_title");
+        m_Movie_Data.year = (String) getIntent().getSerializableExtra("current_movie_year");
+        m_Movie_Data.runtime = (String) getIntent().getSerializableExtra("current_movie_runtime");
+        m_Movie_Data.rating = (Integer) getIntent().getSerializableExtra("current_movie_rating");
+        m_Movie_Data.cast = (String) getIntent().getSerializableExtra("current_movie_cast");
+        m_Movie_Data.director = (String) getIntent().getSerializableExtra("current_movie_director");
+        m_Movie_Data.genre = (String) getIntent().getSerializableExtra("current_movie_genre");
+        m_Movie_Data.hd = (Integer) getIntent().getSerializableExtra("current_movie_hd");
+        m_Movie_Data.plot = (String) getIntent().getSerializableExtra("current_movie_plot");
+        m_Movie_Data.tag = (String) getIntent().getSerializableExtra("current_movie_tag");
+        m_Movie_Data.writer = (String) getIntent().getSerializableExtra("current_movie_writer");
+    }
+
+    private void IntentFillExtra(Intent movieDetail) {
+        MovieInfo currentMovie = m_Movie_Data;
+        movieDetail.putExtra("current_movie_id", currentMovie.id);
+        movieDetail.putExtra("current_movie_title", currentMovie.title);
+        movieDetail.putExtra("current_movie_year", currentMovie.year);
+        movieDetail.putExtra("current_movie_runtime", currentMovie.runtime);
+        movieDetail.putExtra("current_movie_rating", currentMovie.rating);
+        movieDetail.putExtra("current_movie_cast", currentMovie.cast);
+        movieDetail.putExtra("current_movie_director", currentMovie.director);
+        movieDetail.putExtra("current_movie_genre", currentMovie.genre);
+        movieDetail.putExtra("current_movie_hd", currentMovie.hd);
+        movieDetail.putExtra("current_movie_plot", currentMovie.plot);
+        movieDetail.putExtra("current_movie_tag", currentMovie.tag);
+        movieDetail.putExtra("current_movie_writer", currentMovie.writer);
     }
 
 }

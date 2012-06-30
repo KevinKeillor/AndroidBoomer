@@ -23,6 +23,9 @@ public class MovieInfo extends MovieRawInfo {
      * @param Director
      * @param Writer
      */
+    public MovieInfo(){
+
+    }
     private MovieInfo(Drawable Icon, String Id, String Title, String Year, String Genre, String Tag, String Runtime, String Cast,
                       String Plot, String Director, String Writer ) {
         super();

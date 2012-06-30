@@ -273,6 +273,8 @@ public class MovieListActivity extends ListActivity {
     }
 
     public String GetMovieInfo() {
+        // {"jsonrpc": "2.0", "method": "VideoLibrary.GetMovies", "params": {"properties": ["thumbnail", "year", "rating", "mpaa"]}, "id": 1}
+
         StringBuilder builder = new StringBuilder();
         HttpClient client = new DefaultHttpClient();
         XBMCSettings settings = XBMCSettings.getInstance(this);
@@ -296,6 +298,7 @@ public class MovieListActivity extends ListActivity {
              return null;
         }
         return builder.toString();
+
     }
 
     @Override

@@ -13,6 +13,7 @@ import java.io.OutputStreamWriter;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLDecoder;
+import java.security.PrivateKey;
 
 
 /**
@@ -23,6 +24,7 @@ public class XBMCJson {
     private static final String TAG = "Boomer_XBMCJson";
     private static final int CONNECTION_TIMEOUT = 5000;
     private static final int CONNECTION_READ_TIMEOUT = 5000;
+    private static Integer m_id = 0;
 
     /**
      * writeCommand
@@ -34,7 +36,8 @@ public class XBMCJson {
         new Thread(new Runnable() {
             public void run() {
                 try {
-                    _writeCommand(method, params, context);
+                    JSONObject Response = _writeCommand(method, params, context);
+
                 } catch (IOException e) {
                     Log.e(TAG,"IO Error on XBMCJson:writeCommand",e);
                 } catch (JSONException e) {
@@ -100,10 +103,10 @@ public class XBMCJson {
         JSONObject json = new JSONObject();
 
         json.put("jsonrpc", "2.0");
-        json.put("id", "0");   // we don't really use this so value is always zero
+        json.put("id", m_id.toString());   // we don't really use this so value is always zero
         json.put("method", method);
         json.put("params", params);
-
+        m_id++;
         return json;
     }
 

@@ -165,5 +165,13 @@
                 android:textColor="#FFFFFF"
                 android:textSize="11dp" />
 
+        <ImageButton
+                android:id="@+id/playmovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="PlayPauseClick"
+                android:src="@drawable/play" />
+
+
     </LinearLayout>
 </LinearLayout>

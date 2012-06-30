@@ -30,7 +30,7 @@ import java.util.TimerTask;
  * MoviePlayerActivity
  */
 public class MoviePlayerActivity extends Activity implements
-        IgnitedAsyncTaskContextHandler<Integer, String> {
+        IgnitedAsyncTaskContextHandler<Integer, String> , SeekBar.OnSeekBarChangeListener {
 
     private static final String TAG = "Boomer_MoviePlayerActivity";
 
@@ -108,6 +108,7 @@ public class MoviePlayerActivity extends Activity implements
         m_StartTime = System.currentTimeMillis();
         SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
         String currentMovieRuntime = (String) getIntent().getSerializableExtra("current_movie_runtime");
+        seekbar.setOnSeekBarChangeListener(this);
         DateFormat sdf;
         String parseFormat;
         if (currentMovieRuntime.contains("h")){
@@ -163,6 +164,62 @@ public class MoviePlayerActivity extends Activity implements
         m_SeekTimer = new Timer();
         m_SeekTimer.schedule(new UpdateTimeTask(), 0, 1000);
 
+        // Start the movie
+        //{ "jsonrpc": "2.0", "id": "7", "method": "Player.Open", "params": { "item": { "movieid": 14 } } }
+        try {
+            XBMCJson json = new XBMCJson();
+            JSONObject Params = new JSONObject();
+            JSONObject item = new JSONObject();
+
+            String currentMovieId = (String) getIntent().getSerializableExtra("current_movie_id");
+            item.put("movieid",Integer.valueOf(currentMovieId));
+            Params.put("item",item);
+            String Command = "Player.Open";
+            json.writeCommand(Command, Params, this);
+        } catch (JSONException e) {
+            Log.e(TAG,"Failed to create Player.Open Json command",e);
+        }
+
+    }
+
+    /**
+     *
+     * @param seekBar
+     * @param progress
+     * @param fromUser
+     */
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress,
+                                  boolean fromUser) {
+        if (fromUser){ // Ignore changes from the timer
+            XBMCJson json = new XBMCJson();
+            JSONObject Params = new JSONObject();
+            try {
+                Params.put("playerid",1);
+                double position = seekBar.getMax();
+                position = (progress/position) * 100.0;
+                Params.put("value", position);
+                String Command = "Player.Seek";
+                json.writeCommand(Command, Params, this);
+                m_RefreshHandler.setOffset();
+                m_StartTime = System.currentTimeMillis() - (progress*1000) + m_RefreshHandler.m_Offset;
+
+            } catch (JSONException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+
+        }
+
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     //Play button
@@ -173,47 +230,111 @@ public class MoviePlayerActivity extends Activity implements
      * @throws IOException
      * @throws JSONException
      */
-    public void PlayPauseClick(View view) throws IOException, JSONException {
+    public void PlayPauseClick(View view) {
 
         XBMCJson json = new XBMCJson();
         JSONObject Params = new JSONObject();
-        Params.put("playerid",1);
+        try {
+            Params.put("playerid",1);
+        } catch (JSONException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
         String Command = "Player.PlayPause";
         json.writeCommand(Command, Params, this);
+        ImageButton ImgButton = (ImageButton)view;
+
         if(m_Playing){
             m_SeekTimer.cancel();
             m_RefreshHandler.setOffset();
+            ImgButton.setImageResource(R.drawable.play);
         } else {
             m_SeekTimer = new Timer();
             m_SeekTimer.schedule(new UpdateTimeTask(), 0, 1000);
+            ImgButton.setImageResource(R.drawable.pause);
         }
         m_Playing = !m_Playing;
+
     }
 
     //Stop button
-    public void StopClick(View view) throws IOException, JSONException {
+    public void StopClick(View view) {
+
         XBMCJson json = new XBMCJson();
         JSONObject Params = new JSONObject();
-        Params.put("playerid",1);
-        String Command = "Player.Stop";
+        try {
+            Params.put("playerid",1);
+            String Command = "Player.Stop";
+            json.writeCommand(Command, Params, this);
+        } catch (JSONException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } finally {
+            finish();
+        }
+    }
+
+    //Forward button
+    public void ForwardClick(View view) {
+        XBMCJson json = new XBMCJson();
+        JSONObject Params = new JSONObject();
+        try {
+            Params.put("playerid",1);
+            Params.put("speed","increment");
+            String Command = "Player.SetSpeed";
+            json.writeCommand(Command, Params, this);
+        } catch (JSONException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    //Reverse button
+    public void ReverseClick(View view) {
+        XBMCJson json = new XBMCJson();
+        JSONObject Params = new JSONObject();
+        try{
+            Params.put("playerid",1);
+            Params.put("speed","decrement");
+            String Command = "Player.SetSpeed";
+            json.writeCommand(Command, Params, this);
+        } catch (JSONException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    //Reverse button
+    public void UpClick(View view) {
+        XBMCJson json = new XBMCJson();
+        JSONObject Params = new JSONObject();
+        String Command = "Input.Up";
         json.writeCommand(Command, Params, this);
     }
 
-    //Play button
-    public void ForwardClick(View view) throws IOException, JSONException {
+    //Reverse button
+    public void LeftClick(View view) {
         XBMCJson json = new XBMCJson();
         JSONObject Params = new JSONObject();
-        Params.put("playerid",1);
-        String Command = "Player.PlayPause";
+        String Command = "Input.Left";
         json.writeCommand(Command, Params, this);
     }
 
-    //Play button
-    public void ReverseClick(View view) throws IOException, JSONException {
+    public void RightClick(View view) {
         XBMCJson json = new XBMCJson();
         JSONObject Params = new JSONObject();
-        Params.put("playerid",1);
-        String Command = "Player.PlayPause";
+        String Command = "Input.Right";
+        json.writeCommand(Command, Params, this);
+    }
+    //Reverse button
+    public void DownClick(View view) {
+        XBMCJson json = new XBMCJson();
+        JSONObject Params = new JSONObject();
+        String Command = "Input.Down";
+        json.writeCommand(Command, Params, this);
+    }
+
+    //Select button
+    public void SelectClick(View view) {
+        XBMCJson json = new XBMCJson();
+        JSONObject Params = new JSONObject();
+        String Command = "Input.Select";
         json.writeCommand(Command, Params, this);
     }
 
@@ -293,6 +414,7 @@ public class MoviePlayerActivity extends Activity implements
         SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
         seekbar.setMax(m_SeekMax);
         seekbar.setProgress(m_SeekPosition);
+        seekbar.setOnSeekBarChangeListener(this);
     }
 }
 

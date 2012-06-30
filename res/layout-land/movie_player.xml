@@ -71,7 +71,7 @@
                         android:id="@+id/playpausemovie"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:onClick="PlayPauseClick"
+                        android:onClick="UpClick"
                         android:src="@drawable/up" />
 
                     <View
@@ -87,25 +87,27 @@
                     android:padding="1dp" >
 
                     <ImageButton
-                        android:id="@+id/imageButton5"
+                        android:id="@+id/LeftNavigation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:onClick="LeftClick"
                         android:src="@drawable/left" />
 
                     <ImageButton
-                        android:id="@+id/stopmovie"
+                        android:id="@+id/SelectNavigation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:onClick="StopClick"
+                        android:onClick="SelectClick"
                         android:src="@drawable/stop" />
 
                     <ImageButton
-                        android:id="@+id/imageButton5"
+                        android:id="@+id/RightNavigation"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:onClick="RightClick"
                         android:src="@drawable/right" />
                 </TableRow>
 
@@ -125,7 +127,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:onClick="StopClick"
+                        android:onClick="DownClick"
                         android:src="@drawable/down" />
 
                     <View
@@ -159,7 +161,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="PlayPauseClick"
-                        android:src="@drawable/play" />
+                        android:src="@drawable/pause" />
 
                     <ImageButton
                         android:id="@+id/forwardmovie"
