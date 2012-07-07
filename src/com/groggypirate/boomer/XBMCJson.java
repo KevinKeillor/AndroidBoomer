@@ -1,6 +1,9 @@
 package com.groggypirate.boomer;
 
 import android.content.Context;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -36,7 +39,27 @@ public class XBMCJson {
         new Thread(new Runnable() {
             public void run() {
                 try {
-                    JSONObject Response = _writeCommand(method, params, context);
+                    _writeCommand(method, params, context);
+                } catch (IOException e) {
+                    Log.e(TAG,"IO Error on XBMCJson:writeCommand",e);
+                } catch (JSONException e) {
+                    Log.e(TAG, "JSONException on XBMCJson:writeCommand", e);
+                }
+            }
+        }).start();
+    }
+    public void writeCommand(final String method, final JSONObject params, final Context context, final Handler handler){
+        new Thread(new Runnable() {
+            public void run() {
+                try {
+                    String response = _writeCommand(method, params, context);
+                    // our handler
+                    Message Msg = new Message();
+                    Bundle bndl = new Bundle();
+                    bndl.putString("Response", response);
+                    Msg.setData(bndl);
+                    Msg.what = 1;
+                    handler.sendMessage(Msg);
 
                 } catch (IOException e) {
                     Log.e(TAG,"IO Error on XBMCJson:writeCommand",e);
@@ -56,10 +79,9 @@ public class XBMCJson {
      * @throws IOException
      * @throws JSONException
      */
-    private JSONObject _writeCommand(String method, JSONObject params,Context context) throws IOException, JSONException {
+    private String _writeCommand(String method, JSONObject params,Context context) throws IOException, JSONException {
         URL url;
 
-        JSONObject response = new JSONObject();
         XBMCSettings xbmcSettings = XBMCSettings.getInstance(context);
         String path = "http://"+xbmcSettings.getIpAddress()+":"+xbmcSettings.getPort()+"/jsonrpc";
         url = new URL(path);
@@ -81,15 +103,7 @@ public class XBMCJson {
         out.write(CreateCommand(method, params).toString());
         out.close();
 
-        try {
-            response = GetResponse(uc);
-        } catch (JSONException e) {
-            final String debugUrl;
-            debugUrl = URLDecoder.decode(url.toString(), "UTF-8");
-            Log.e(TAG,debugUrl);
-            Log.e(TAG,e.getMessage());
-        }
-        return response;
+        return  GetResponse(uc);
     }
 
     /**
@@ -117,7 +131,7 @@ public class XBMCJson {
      * @throws IOException
      * @throws JSONException
      */
-    private JSONObject GetResponse(URLConnection uc) throws IOException, JSONException {
+    private String GetResponse(URLConnection uc) throws IOException, JSONException {
         final BufferedReader in = new BufferedReader(new InputStreamReader(uc.getInputStream()), 8192);
         final StringBuilder response = new StringBuilder();
         String line;
@@ -126,10 +140,10 @@ public class XBMCJson {
             response.append(line);
         }
 
-        JSONObject JsonResponse = new JSONObject(response.toString());
+        //JSONObject JsonResponse = new JSONObject(response.toString());
 
         in.close();
-        return JsonResponse;
+        return response.toString();
     }
 
     /**

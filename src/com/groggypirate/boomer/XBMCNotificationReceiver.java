@@ -32,7 +32,7 @@ public class XBMCNotificationReceiver extends IgnitedAsyncTask<MoviePlayerActivi
             // Create a StringBuffer so that we can convert the bytes to a String
 
             while(true){
-                ByteBuffer buffer = ByteBuffer.allocate(2048);
+                ByteBuffer buffer = ByteBuffer.allocate(1024*50);
                 int bytesRead;
                 StringBuilder response = new StringBuilder();
                 while ((bytesRead = socketChannel.read(buffer)) > 0){
@@ -64,7 +64,9 @@ public class XBMCNotificationReceiver extends IgnitedAsyncTask<MoviePlayerActivi
      * @param response
      */
     private void ActOnResponse(StringBuilder response) {
+        if (response.length() > 0){
         Log.i(TAG, "Notification:" + response);
+        }
         // Deconstruct the response
 
         // pass on the related information based on the nature of the notification

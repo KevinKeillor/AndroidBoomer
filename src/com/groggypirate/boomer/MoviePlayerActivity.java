@@ -50,34 +50,42 @@ public class MoviePlayerActivity extends Activity implements
      *
      */
     class RefreshHandler extends Handler {
-        public void setOffset() {
-            this.m_Offset += System.currentTimeMillis() - m_StartTime ;
+
+        private int m_Ratio;
+
+        RefreshHandler() {
+            m_Ratio = 1;
         }
 
-        long m_Offset;
-        RefreshHandler() {
-            m_Offset = 0;
+        public void decreaseRatio(int m_Ratio) {
+            m_Ratio --;
+            if (m_Ratio == 0){
+                m_Ratio --;
+            }
+        }
+
+        public void increaseRatio(int m_Ratio) {
+            m_Ratio ++;
+            if (m_Ratio == 0){
+                m_Ratio ++;
+            }
+        }
+
+        public void setRatio(int m_Ratio) {
+            m_Ratio = 1;
         }
 
         /**
          * Handle the update and refresh the progressbar
          * @param msg  Message
          */
+
         @Override
         public void handleMessage(Message msg) {
-            long millis = m_Offset + System.currentTimeMillis() - m_StartTime;
-            // Was going to add time but its not going to be accurate
-            /*
-            int seconds = (int) (millis / 1000);
-            int minutes = seconds / 60;
-            int hours = minutes / 60;
-            minutes = minutes % 60;
-            seconds     = seconds % 60;
-            TextView view = (TextView) findViewById(R.id.movieTime);
-            view.setText(String.format("%d:%02d:%02d",hours, minutes, seconds));
-            */
+
             SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
-            int seekPosition = (int) (millis / 1000);
+            int seekPosition = seekbar.getProgress();
+            seekPosition += m_Ratio;
             seekbar.setProgress(seekPosition);
             m_SeekPosition = seekPosition;
         }
@@ -149,7 +157,7 @@ public class MoviePlayerActivity extends Activity implements
 
         // Start the background task to handle player notifications.
         XBMCSettings xbmcSettings = XBMCSettings.getInstance(this);
-        new XBMCNotificationReceiver().execute(xbmcSettings.getIpAddress());
+        //new XBMCNotificationReceiver().execute(xbmcSettings.getIpAddress());
 
         // try to obtain a reference to a task piped through from the previous
         // activity instance
@@ -201,9 +209,7 @@ public class MoviePlayerActivity extends Activity implements
                 Params.put("value", position);
                 String Command = "Player.Seek";
                 json.writeCommand(Command, Params, this);
-                m_RefreshHandler.setOffset();
-                m_StartTime = System.currentTimeMillis() - (progress*1000) + m_RefreshHandler.m_Offset;
-
+                m_SeekPosition = progress;
             } catch (JSONException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
@@ -245,10 +251,11 @@ public class MoviePlayerActivity extends Activity implements
 
         if(m_Playing){
             m_SeekTimer.cancel();
-            m_RefreshHandler.setOffset();
+            m_RefreshHandler.setRatio(1);
             ImgButton.setImageResource(R.drawable.play);
         } else {
             m_SeekTimer = new Timer();
+            m_RefreshHandler.setRatio(0);
             m_SeekTimer.schedule(new UpdateTimeTask(), 0, 1000);
             ImgButton.setImageResource(R.drawable.pause);
         }

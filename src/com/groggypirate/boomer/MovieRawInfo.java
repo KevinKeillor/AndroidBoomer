@@ -15,4 +15,5 @@ public class MovieRawInfo implements Serializable {
     public String director;
     public String writer;
     public String plot;
+    public String thumb;
 }
